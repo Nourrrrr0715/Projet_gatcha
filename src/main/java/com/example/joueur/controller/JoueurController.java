@@ -23,9 +23,10 @@ public class JoueurController {
     }
 
     @GetMapping("/{id}")
-    public String getJoueur(@PathVariable String id) {
-        return "récupère 1 joueur selon son ID";
+    public Joueur getJoueur(@PathVariable String id) {
+        return joueurService.getJoueurById(id);
     }
+    
 
     @PostMapping
     public Joueur createJoueur(@RequestBody Joueur joueur) {
