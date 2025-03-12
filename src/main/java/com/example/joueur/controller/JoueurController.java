@@ -25,7 +25,7 @@ public class JoueurController {
     @GetMapping("/{id}")
     public Joueur getJoueur(@PathVariable String id) {
         return joueurService.getJoueurById(id);
-    }
+    } 
     
 
     @PostMapping
